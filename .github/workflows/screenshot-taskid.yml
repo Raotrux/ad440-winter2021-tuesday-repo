@@ -23,6 +23,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+        #Azure Login 
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+            creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
+            
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -51,10 +58,3 @@ jobs:
         #fullPage:  optional
         # The screenshot name if you do not want the default timestamp
         #screenshotName:  optional
-    
-      #Azure Login 
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-            creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
-      #End
