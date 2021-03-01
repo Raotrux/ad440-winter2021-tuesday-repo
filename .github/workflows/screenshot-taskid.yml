@@ -40,8 +40,8 @@ jobs:
       - name: Puppeteer Screenshot Action
         uses: JonathanTreffler/full-website-screenshot-action@v1.0
         with:
-          url: https://nscstrdevusw2tuecommon.z5.web.core.windows.net/
-          destination: ./screenshot.png
+          url: https://nscstrdevusw2tuecommon.z5.web.core.windows.net/users/{user_id}/tasks/{task_id}
+          destination: https://nscstrdevusw2tuecommon.blob.core.windows.net/screenshots
 
         #Azure Login 
       - name: Azure Login
