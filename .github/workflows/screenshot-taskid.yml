@@ -55,4 +55,4 @@ jobs:
         with:
           azcliversion: 2.19.1
           inlineScript: |
-            az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }}   $GITHUB_WORKSPACE/screenshots/screenshot-${timestamp}.png --file  $GITHUB_WORKSPACE/screenshots/screenshot-${timestamp}.png
+            az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }} --file  $GITHUB_WORKSPACE/screenshots/screenshot-${timestamp}.png --name capture-task-id-${timestamp}.png
