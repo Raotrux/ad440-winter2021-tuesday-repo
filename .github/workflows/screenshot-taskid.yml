@@ -40,7 +40,7 @@ jobs:
       - name: Puppeteer Screenshot Action
         uses: JonathanTreffler/full-website-screenshot-action@v1.0
         with:
-          url: https://nscstrdevusw2tuecommon.z5.web.core.windows.net/users/1/tasks/1
+          url: https://nscstrdevusw2tuecommon.z5.web.core.windows.net
           destination: capture-task-id_${{ steps.date.outputs.date }}.png
           
 
