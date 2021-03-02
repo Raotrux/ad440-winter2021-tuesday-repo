@@ -55,4 +55,4 @@ jobs:
         with:
           azcliversion: 2.19.1
           inlineScript: |
-            az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }}   --name capture-task-id${{ steps.date.outputs.date }}.png --file  capture-task-id${{ steps.date.outputs.date }}.png
+            az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }}   --name capture-task-id-${{ steps.date.outputs.date }}.png --file  capture-task-id${{ steps.date.outputs.date }}.png
