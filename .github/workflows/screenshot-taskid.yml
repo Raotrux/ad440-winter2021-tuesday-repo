@@ -41,7 +41,7 @@ jobs:
         uses: JonathanTreffler/full-website-screenshot-action@v1.0
         with:
           url: https://nscstrdevusw2tuecommon.z5.web.core.windows.net/users/{user_id}/tasks/{task_id}
-          destination: /screenshot.png
+          destination: screenshot.png
           
 
         #Azure Login 
