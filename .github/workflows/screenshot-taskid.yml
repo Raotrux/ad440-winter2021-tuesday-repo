@@ -41,7 +41,7 @@ jobs:
         uses: JonathanTreffler/full-website-screenshot-action@v1.0
         with:
           url: https://nscstrdevusw2tuecommon.z5.web.core.windows.net/users/{user_id}/tasks/{task_id}
-          destination: ./screenshot.png
+          destination: /screenshot.png
           
 
         #Azure Login 
@@ -56,4 +56,4 @@ jobs:
         with:
           azcliversion: 2.19.1
           inlineScript: |
-            az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }} --file  ./screenshot.png --name capture-task-id-${{ steps.date.outputs.date }}.png
+            az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }} --file screenshot.png --name capture-task-id-${{ steps.date.outputs.date }}.png
