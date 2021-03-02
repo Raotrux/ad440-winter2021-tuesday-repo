@@ -50,4 +50,4 @@ jobs:
         uses: azure/CLI@v1
         with:
           azcliversion: 2.19.1
-          inlineScript: az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }} --file capture-task-id_${{ steps.date.outputs.date }}.png --name capture-task-id_${{ steps.date.outputs.date }}.png
+          inlineScript: az storage blob upload --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.STORAGE_ACCOUNT_KEY }}  --container-name ${{ secrets.BLOB_CONTAINER_SCREENSHOTS }} --file capture-users-${{ steps.date.outputs.date }}.png --name capture-users-${{ steps.date.outputs.date }}.png
